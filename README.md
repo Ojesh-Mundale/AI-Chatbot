@@ -16,6 +16,8 @@ Welcome to the Aura Chatbot project! Aura stands for **Automated User Response A
 - Python-Flask
 - Fetch API for server communication
 
+## CHATBOT AURA INTERFACE
+![Aura Chatbot Screenshot](chatbot.png)
 ## Getting Started
 
 To run the Aura Chatbot locally, follow these steps:
