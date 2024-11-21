@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Aura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #chat {
+            width: 90%;
+            max-width: 600px;
+            height: 70%;
+            overflow-y: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .user {
+            background-color: #e1f5fe; /* Light blue */
+            align-self: flex-end;
+        }
+
+        .bot {
+            background-color: #ffe0b2; /* Light orange */
+            align-self: flex-start;
+        }
+
+        .message:hover {
+            transform: scale(1.02);
+        }
+
+        input[type="text"] {
+            width: 90%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50; /* Green */
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat with AURA</h1> <!-- Bot name displayed here -->
+    <div id="chat">
+        <!-- Chat messages will be appended here -->
+    </div>
+    <input type="text" id="user_input" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            const userInput = document.getElementById('user_input').value.trim();
+            if (userInput === "") return; // Prevent sending empty messages
+
+            // Append user message
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.className = 'message user';
+            userMessageDiv.innerText = userInput;
+            document.getElementById('chat').appendChild(userMessageDiv);
+            document.getElementById('user_input').value = ""; // Clear input
+
+            // Scroll to the bottom
+            document.getElementById('chat').scrollTop = document.getElementById('chat').scrollHeight;
+
+            // Send user message to the server
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({ user_input: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Append bot response
+                const botMessageDiv = document.createElement('div');
+                botMessageDiv.className = 'message bot';
+                botMessageDiv.innerText = data.response; // You can also prepend "Aura: " if desired
+                document.getElementById('chat').appendChild(botMessageDiv);
+
+                // Scroll to the bottom
+                document.getElementById('chat').scrollTop = document.getElementById('chat').scrollHeight;
+            });
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+ sendMessage();
+            }
+        }
+    </script>
+</body>
+</html>
