@@ -36,6 +36,8 @@
             border-radius: 10px;
             transition: transform 0.2s;
             animation: fadeIn 0.5s ease;
+            display: flex; /* Added for flex layout */
+            align-items: center; /* Center items vertically */
         }
 
         .user {
@@ -46,6 +48,12 @@
         .bot {
             background-color: #ffe0b2; /* Light orange */
             align-self: flex-start;
+        }
+
+        .message img {
+            width: 30px; /* Set icon size */
+            height: 30px; /* Set icon size */
+            margin-right: 10px; /* Space between icon and text */
         }
 
         .message:hover {
@@ -95,9 +103,8 @@
     </style>
 </head>
 <body>
-    <h1>Chat with AURA</h1> <!-- Bot name displayed here -->
+    <h1>Chat with AURA</h1>
     <div id="chat">
-        <!-- Chat messages will be appended here -->
     </div>
     <input type="text" id="user_input" placeholder="Type your message here..." onkeypress="handleKeyPress(event)">
     <button onclick="sendMessage()">Send</button>
@@ -110,7 +117,7 @@
             // Append user message
             const userMessageDiv = document.createElement('div');
             userMessageDiv.className = 'message user';
-            userMessageDiv.innerText = userInput;
+            userMessageDiv.innerHTML = '<img src="{{ url_for("static", filename="images/profile-user.png") }}" alt="User  Icon">' + userInput; // Add user icon
             document.getElementById('chat').appendChild(userMessageDiv);
             document.getElementById('user_input').value = ""; // Clear input
 
@@ -130,7 +137,7 @@
                 // Append bot response
                 const botMessageDiv = document.createElement('div');
                 botMessageDiv.className = 'message bot';
-                botMessageDiv.innerText = data.response; // You can also prepend "Aura: " if desired
+                botMessageDiv.innerHTML = '<img src="{{ url_for("static", filename="images/bot_icon.png") }}" alt="Bot Icon">' + data.response; // Add bot icon
                 document.getElementById('chat').appendChild(botMessageDiv);
 
                 // Scroll to the bottom
@@ -140,7 +147,7 @@
 
         function handleKeyPress(event) {
             if (event.key === 'Enter') {
- sendMessage();
+                sendMessage();
             }
         }
     </script>
