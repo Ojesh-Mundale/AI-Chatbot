@@ -2,7 +2,7 @@
 
 Aura Chatbot is a web-based AI chatbot application built with Java and Spring Boot. It leverages the Google Gemini generative language API to provide intelligent conversational responses. The chatbot features a simple and clean web interface for users to interact with the AI in real-time.
 
-## Screenshot
+## ChatBot Interface
 
 ![Aura Chatbot Screenshot](ChatBot-Interface.png)
 
