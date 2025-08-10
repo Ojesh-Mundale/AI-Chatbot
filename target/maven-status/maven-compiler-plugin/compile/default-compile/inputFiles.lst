@@ -1,4 +1,13 @@
-C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\Java Projects\AI chatbot using java\src\main\java\com\aura\AuraChatbotApplication.java
-C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\Java Projects\AI chatbot using java\src\main\java\com\aura\controller\ChatbotController.java
-C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\Java Projects\AI chatbot using java\src\main\java\com\aura\service\GeminiApiService.java
-C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\Java Projects\AI chatbot using java\src\main\java\com\aura\controller\TestController.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\config\ChatbotConfig.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\config\GlobalExceptionHandler.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\model\ChatRequest.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\config\WebConfig.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\aura\service\GeminiApiService.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\controller\ChatbotController.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\service\GeminiApiService.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\model\QuizQuestion.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\model\DocumentUploadRequest.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\CodeMentorChatbotApplication.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\controller\EduMateController.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\service\DocumentProcessingService.java
+C:\Users\ojesh_hpnmmdy\Downloads\Projects by Ojesh\JAVA\AI chatbot using java\src\main\java\com\codementor\service\AIFeaturesService.java

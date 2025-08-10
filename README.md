@@ -1,10 +1,10 @@
-# Aura Chatbot
+# codementor Chatbot
 
-Aura Chatbot is a web-based AI chatbot application built with Java and Spring Boot. It leverages the Google Gemini generative language API to provide intelligent conversational responses. The chatbot features a simple and clean web interface for users to interact with the AI in real-time.
+codementor Chatbot is a web-based AI chatbot application built with Java and Spring Boot. It leverages the Google Gemini generative language API to provide intelligent conversational responses. The chatbot features a simple and clean web interface for users to interact with the AI in real-time.
 
 ## ChatBot Interface
 
-![Aura Chatbot Screenshot](ChatBot-Interface.png)
+![codementor Chatbot Screenshot](ChatBot-Interface.png)
 
 ## Features
 
@@ -46,13 +46,13 @@ Aura Chatbot is a web-based AI chatbot application built with Java and Spring Bo
    http://localhost:8080/
    ```
 
-5. Start chatting with Aura!
+5. Start chatting with codementor!
 
 ## Project Structure
 
-- `src/main/java/com/aura/AuraChatbotApplication.java` - Main Spring Boot application class
-- `src/main/java/com/aura/controller/ChatbotController.java` - Handles web requests and chat API endpoints
-- `src/main/java/com/aura/service/GeminiApiService.java` - Service layer integrating with Google Gemini API
+- `src/main/java/com/codementor/codementorChatbotApplication.java` - Main Spring Boot application class
+- `src/main/java/com/codementor/controller/ChatbotController.java` - Handles web requests and chat API endpoints
+- `src/main/java/com/codementor/service/GeminiApiService.java` - Service layer integrating with Google Gemini API
 - `src/main/resources/templates/index.html` - Frontend chat UI template
 - `src/main/resources/static/images/` - Static images used in the chat UI
 

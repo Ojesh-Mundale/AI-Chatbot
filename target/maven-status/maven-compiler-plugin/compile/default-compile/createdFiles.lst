@@ -1,4 +1,12 @@
-com\aura\AuraChatbotApplication.class
-com\aura\controller\ChatbotController.class
-com\aura\controller\TestController.class
-com\aura\service\GeminiApiService.class
+com\codementor\CodeMentorChatbotApplication.class
+com\codementor\model\ChatRequest.class
+com\codementor\service\DocumentProcessingService.class
+com\codementor\controller\ChatbotController.class
+com\codementor\config\WebConfig.class
+com\codementor\config\ChatbotConfig.class
+com\codementor\config\GlobalExceptionHandler.class
+com\codementor\controller\EduMateController.class
+com\codementor\model\DocumentUploadRequest.class
+com\codementor\model\QuizQuestion.class
+com\codementor\service\AIFeaturesService.class
+com\codementor\service\GeminiApiService.class
