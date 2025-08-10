@@ -1,69 +1,95 @@
-# codementor Chatbot
+# Edumate with CodeMentor Chatbot
 
-codementor Chatbot is a web-based AI chatbot application built with Java and Spring Boot. It leverages the Google Gemini generative language API to provide intelligent conversational responses. The chatbot features a simple and clean web interface for users to interact with the AI in real-time.
+A sophisticated AI-powered chatbot application built with Java Spring Boot that provides educational assistance, document processing, and AI-driven features for students and educators.
 
-## ChatBot Interface
+## 🚀 Features
 
-![codementor Chatbot Screenshot](ChatBot-Interface.png)
+### Core Chatbot Capabilities
+- **Natural Language Processing**: Advanced AI responses using Gemini API
+- **Multi-modal Support**: Text-based conversations with intelligent context understanding
+- **Real-time Communication**: WebSocket-based instant messaging
 
-## Features
+### Educational Tools
+- **EduMate Module**: Specialized educational assistance interface
+- **Document Processing**: Upload and analyze PDF, DOCX, and text documents
+- **Quiz Generation**: AI-powered quiz creation from study materials
+- **Study Assistant**: Personalized learning recommendations
 
-- Interactive chat interface with user and bot messages
-- Integration with Google Gemini API for AI-generated responses
-- Responsive and user-friendly UI built with HTML, CSS, and JavaScript
-- Spring Boot backend handling API requests and serving the frontend
+### Technical Features
+- **Responsive Web Interface**: Modern, mobile-friendly UI
+- **RESTful API**: Clean API endpoints for all functionalities
+- **Exception Handling**: Global error handling with user-friendly messages
+- **Configuration Management**: Environment-based configuration
 
-## Prerequisites
+## 🛠️ Technology Stack
 
+### Backend
+- **Java 17** - Programming language
+- **Spring Boot 3.x** - Application framework
+- **Spring Web** - REST API development
+- **Spring WebSocket** - Real-time communication
+- **Gemini API** - AI/ML integration
+
+### Frontend
+- **Thymeleaf** - Server-side template engine
+- **HTML5/CSS3/JavaScript** - Modern web technologies
+- **Responsive Design** - Bootstrap framework
+
+### Build & Deployment
+- **Maven** - Build automation
+- **JAR Packaging** - Self-contained executable
+
+### Prerequisites
 - Java 17 or higher
 - Maven 3.6+
-- A valid Google Gemini API key
+- Gemini API key
 
-## Getting Started
+### Installation
 
-1. Clone the repository:
+1. **Clone the repository**
+```bash
+git clone <repository-url>
+cd your_file_name
+```
 
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
+2. **Build the project**
+```bash
+mvn clean install
+```
 
-2. Configure your Google Gemini API key in `src/main/resources/application.properties`:
+3. **Run the application**
+```bash
+mvn spring-boot:run
+```
 
-   ```
-   gemini.api.key=YOUR_API_KEY_HERE
-   ```
+4. **Access the application**
+- Main Chatbot: http://localhost:8080
+- EduMate Interface: http://localhost:8080/edumate
 
-3. Build and run the application using Maven:
+# Gemini API Configuration
+gemini.api.key=your-api-key-here
+gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
 
-   ```bash
-   mvn spring-boot:run
-   ```
+# File Upload Configuration
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
+```
 
-4. Open your browser and navigate to:
+## 🤝 Contributing
 
-   ```
-   http://localhost:8080/
-   ```
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-5. Start chatting with codementor!
+## 📄 License
 
-## Project Structure
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- `src/main/java/com/codementor/codementorChatbotApplication.java` - Main Spring Boot application class
-- `src/main/java/com/codementor/controller/ChatbotController.java` - Handles web requests and chat API endpoints
-- `src/main/java/com/codementor/service/GeminiApiService.java` - Service layer integrating with Google Gemini API
-- `src/main/resources/templates/index.html` - Frontend chat UI template
-- `src/main/resources/static/images/` - Static images used in the chat UI
+## 🙏 Acknowledgments
 
-## Usage
+- Google Gemini API for AI capabilities
+- Spring Boot team for the excellent framework
+- Thymeleaf for server-side templating
 
-Type your message in the input box and press Enter or click the Send button. The chatbot will respond with AI-generated replies powered by the Gemini API.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Contact
-
-For any questions or feedback, please contact me.
