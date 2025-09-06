@@ -1,4 +1,4 @@
-# Edumate with CodeMentor Chatbot
+# Edumate with CodeMentor AI Chatbot
 
 A sophisticated AI-powered chatbot application built with Java Spring Boot that provides educational assistance, document processing, and AI-driven features for students and educators.
 
