@@ -44,37 +44,6 @@ A sophisticated AI-powered chatbot application built with Java Spring Boot that 
 - Maven 3.6+
 - Gemini API key
 
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone <repository-url>
-cd your_file_name
-```
-
-2. **Build the project**
-```bash
-mvn clean install
-```
-
-3. **Run the application**
-```bash
-mvn spring-boot:run
-```
-
-4. **Access the application**
-- Main Chatbot: http://localhost:8080
-- EduMate Interface: http://localhost:8080/edumate
-
-# Gemini API Configuration
-gemini.api.key=your-api-key-here
-gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
-
-# File Upload Configuration
-spring.servlet.multipart.max-file-size=10MB
-spring.servlet.multipart.max-request-size=10MB
-```
-
 ## 🤝 Contributing
 
 1. Fork the repository
